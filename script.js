@@ -144,7 +144,7 @@ async function typeInto(el, text, speed = 42) {
 }
 
 const LINES = [
-  `Happy Birthday, ${N}...`,
+  `Happy Birthday, Charos...`,
   'Today the world got a little brighter,',
   'because this is the day you were born.',
   "I wanted to give you something money can't buy,",
