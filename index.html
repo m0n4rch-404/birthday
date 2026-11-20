@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Something for you ♥</title>
+  <meta name="theme-color" content="#05000a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <canvas id="heart"></canvas>
+  <canvas id="fx"></canvas>
+
+  <main>
+    <section id="intro" class="screen active">
+      <p class="small">A little surprise for the birthday girl</p>
+      <h1 id="who">you</h1>
+      <button id="start" class="btn">Open your gift 🎁</button>
+    </section>
+
+    <section id="cakeScreen" class="screen">
+      <h2>Happy Birthday!</h2>
+      <!-- The cake is an inline SVG with its own sizes and colours,
+           so it shows up even if style.css is old or cached. -->
+      <div id="cake" role="button" tabindex="0" aria-label="Blow out the candles"
+           style="position:relative;width:220px;height:240px;margin:28px 0 20px;cursor:pointer;">
+        <svg viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg"
+             style="display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 0 18px rgba(255,92,138,.45));">
+          <!-- plate -->
+          <ellipse cx="110" cy="226" rx="104" ry="9" fill="#ffffff" opacity=".18"/>
+          <!-- bottom layer -->
+          <rect x="10" y="150" width="200" height="72" rx="12" fill="#ff5c8a"/>
+          <rect x="10" y="150" width="200" height="16" rx="8" fill="#ffffff" opacity=".92"/>
+          <circle cx="45" cy="196" r="5" fill="#ffd0dc"/>
+          <circle cx="85" cy="204" r="5" fill="#ffd0dc"/>
+          <circle cx="125" cy="196" r="5" fill="#ffd0dc"/>
+          <circle cx="165" cy="204" r="5" fill="#ffd0dc"/>
+          <!-- top layer -->
+          <rect x="40" y="100" width="140" height="56" rx="12" fill="#ffb6c1"/>
+          <rect x="40" y="100" width="140" height="14" rx="7" fill="#ffffff" opacity=".92"/>
+          <!-- candles -->
+          <rect x="75" y="58" width="10" height="44" rx="3" fill="#ffd0dc"/>
+          <rect x="105" y="58" width="10" height="44" rx="3" fill="#ffd0dc"/>
+          <rect x="135" y="58" width="10" height="44" rx="3" fill="#ffd0dc"/>
+          <!-- flames -->
+          <g class="fl" style="transition:opacity .4s;">
+            <circle cx="80" cy="46" r="15" fill="#ffaa00" opacity=".25"/>
+            <ellipse cx="80" cy="46" rx="6" ry="10" fill="#ffb300">
+              <animate attributeName="ry" values="10;12;9;11;10" dur="0.7s" repeatCount="indefinite"/>
+            </ellipse>
+            <ellipse cx="80" cy="49" rx="3" ry="5" fill="#fff6a8"/>
+          </g>
+          <g class="fl" style="transition:opacity .4s;">
+            <circle cx="110" cy="46" r="15" fill="#ffaa00" opacity=".25"/>
+            <ellipse cx="110" cy="46" rx="6" ry="10" fill="#ffb300">
+              <animate attributeName="ry" values="11;9;12;10;11" dur="0.6s" repeatCount="indefinite"/>
+            </ellipse>
+            <ellipse cx="110" cy="49" rx="3" ry="5" fill="#fff6a8"/>
+          </g>
+          <g class="fl" style="transition:opacity .4s;">
+            <circle cx="140" cy="46" r="15" fill="#ffaa00" opacity=".25"/>
+            <ellipse cx="140" cy="46" rx="6" ry="10" fill="#ffb300">
+              <animate attributeName="ry" values="9;11;10;12;9" dur="0.8s" repeatCount="indefinite"/>
+            </ellipse>
+            <ellipse cx="140" cy="49" rx="3" ry="5" fill="#fff6a8"/>
+          </g>
+        </svg>
+      </div>
+      <p class="small" id="wishHint">Tap the candles and make a wish</p>
+    </section>
+
+    <section id="heartScreen" class="screen">
+      <div id="center">
+        <p class="small">made with love for</p>
+        <h2 id="centerName">you</h2>
+      </div>
+    </section>
+
+    <section id="letterScreen" class="screen">
+      <div id="letter"></div>
+    </section>
+
+    <section id="askScreen" class="screen">
+      <h2 id="ask">Will you be mine?</h2>
+      <div class="buttons">
+        <button id="yes" class="btn">Yes ♥</button>
+        <button id="no" class="btn ghost">No</button>
+      </div>
+    </section>
+
+    <section id="yesScreen" class="screen">
+      <h2>You just made me the happiest person alive ♥</h2>
+      <pre id="code"></pre>
+      <p id="sign"></p>
+      <button id="replay" class="link">watch again</button>
+    </section>
+  </main>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>
