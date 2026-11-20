@@ -230,11 +230,11 @@ yes.addEventListener('click', async () => {
 
   $('code').textContent = '';
   $('sign').textContent = '';
-  const code = `love = True\nwhile love:\n    print("I love you, ${N}")  # forever`;
+  const code = `love = True\nwhile love:\n    print("I love you, Charos")  # forever`;
   await sleep(600);
   await typeInto($('code'), code, 38);
   await sleep(500);
-  if (SENDER) $('sign').textContent = '— ' + SENDER + ' ♥';
+  if (SENDER) $('sign').textContent = '— ' + 'Murod' + ' ♥';
 });
 
 $('replay').addEventListener('click', () => {
